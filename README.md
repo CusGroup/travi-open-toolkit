@@ -10,6 +10,10 @@ An early bilingual menu builder for independent shops and cafés. No AI service 
 - Public menu URLs, SVG QR codes, updates and deletion using a private edit key.
 - Edit-key export and recovery on another device.
 
+## Optional café admin backend
+
+The [admin module](admin/README.md) includes login, product and category management, image uploads, availability and visibility controls, website content and appearance editing, SQLite storage and a minimal storefront. It is a separate single-store server with sample configuration and no production data. The admin interface is currently Vietnamese; AI remains planned.
+
 ## Why we plan to use Claude
 
 Claude API is planned as an optional language and reasoning layer to help independent shop owners serve customers across languages and spend less time preparing content. The core menu builder will continue to work without an AI account.
