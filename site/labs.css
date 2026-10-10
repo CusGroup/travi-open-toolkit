@@ -32,3 +32,5 @@ label{font-size:16px}.result p{font-size:14px}
 .identity img{width:76px;height:76px;border-radius:0;mix-blend-mode:multiply}.nav-shell{height:108px}.identity{font-size:25px}@media(max-width:700px){.nav-shell{height:92px}.identity img{width:62px;height:62px}.identity{font-size:21px}.nav-shell nav{top:92px}}
 
 .item-image-preview{width:140px;height:140px;object-fit:cover;border-radius:10px}.image-status{font-size:14px}.menu-product-image{width:90px;height:90px;object-fit:cover;border-radius:8px}.download-item>div{flex:1;min-width:0}.menu-item-editor .actions button{background:#fffdf8;border:1px solid #cbd6c1;border-radius:8px;padding:8px 12px;font-size:15px}.menu-preview .download-item{flex-wrap:wrap}
+
+.menu-item-editor [hidden]{display:none!important}
