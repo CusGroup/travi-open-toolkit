@@ -10,6 +10,21 @@ An early bilingual menu builder for independent shops and cafés. No AI service 
 - Public menu URLs, SVG QR codes, updates and deletion using a private edit key.
 - Edit-key export and recovery on another device.
 
+## Why we plan to use Claude
+
+Claude API is planned as an optional language and reasoning layer to help independent shop owners serve customers across languages and spend less time preparing content. The core menu builder will continue to work without an AI account.
+
+- **Menu translation:** draft English and other language versions while preserving local dish names, prices and the ingredients supplied by the owner.
+- **Product descriptions:** turn owner-provided notes into clear, concise descriptions. Do not infer ingredients, allergens, nutritional values or certifications from photos or names.
+- **Store assistance:** explain owner-selected documents and, in a later phase, sales summaries in plain language. Numerical calculations remain deterministic; Claude would explain the computed results.
+- **Community resources:** help contributors adapt reusable menu and customer communication templates to local languages and contexts.
+
+The first planned integration is a “Translate with Claude” action with a side-by-side review screen. An owner would select the fields to send, review the generated draft and explicitly approve changes before saving or publishing. API calls would run on the backend; keys would never be embedded in browser code or public menus. Operators would configure their own Anthropic account and pay API usage separately from the Apache-2.0 code.
+
+Before release, we plan to add request limits, error handling and tests for preserving names, prices and supplied ingredient facts, then evaluate translations with bilingual reviewers. AI output can be inaccurate and will require human review.
+
+**Current status:** this repository has no Claude integration, AI translation, document assistant or sales-data connector yet. These are development plans, not available features or a claim of partnership with Anthropic.
+
 ## Run with Docker
 
 ```bash
