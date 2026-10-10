@@ -34,3 +34,32 @@ label{font-size:16px}.result p{font-size:14px}
 .item-image-preview{width:140px;height:140px;object-fit:cover;border-radius:10px}.image-status{font-size:14px}.menu-product-image{width:90px;height:90px;object-fit:cover;border-radius:8px}.download-item>div{flex:1;min-width:0}.menu-item-editor .actions button{background:#fffdf8;border:1px solid #cbd6c1;border-radius:8px;padding:8px 12px;font-size:15px}.menu-preview .download-item{flex-wrap:wrap}
 
 .menu-item-editor [hidden]{display:none!important}
+
+/* Menu editor */
+.menu-workspace{background:transparent;border:0;padding:0;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:28px;align-items:start}
+#menu-builder{min-width:0;background:#fffdf8;border:1px solid #d8dfd3;border-radius:20px;padding:26px;box-shadow:0 8px 30px #14382c06}
+#menu-builder label{font-size:14px;font-weight:600;color:#294839;margin:0;min-width:0}
+#menu-builder input,#menu-builder select{font-size:16px;font-weight:400;background:white;border:1px solid #d3ddd1;border-radius:10px;padding:12px 13px;margin-top:8px;min-height:46px;transition:border-color .15s,box-shadow .15s}
+#menu-builder input:focus,#menu-builder select:focus{outline:none;border-color:#638548;box-shadow:0 0 0 3px #63854820}
+#menu-builder input::placeholder{color:#879489;font-size:14px}
+.store-fields{display:grid;grid-template-columns:1.4fr 1fr;gap:16px;padding-bottom:24px;border-bottom:1px solid #e1e6dc;margin-bottom:26px}
+.store-fields h3,.item-field-group h3,.image-fields h3{grid-column:1/-1;font-size:16px;font-weight:700;letter-spacing:0;margin:0}
+.store-fields label:first-of-type{grid-column:1/-1}
+.menu-item-editor{margin:0 0 24px;padding:20px;border:1px solid #d8dfd3;background:#fafbf7;border-radius:15px;min-width:0}
+.menu-item-editor legend{font-size:15px;font-weight:700;background:#fffdf8;border:1px solid #d8dfd3;border-radius:8px;padding:6px 12px}
+.bilingual-fields{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:6px 0 20px}
+.item-field-group{display:grid;gap:14px;align-content:start}
+.item-field-group h3{font-size:12px;text-transform:uppercase;letter-spacing:.8px;color:#68806a}
+.item-details{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:20px}.item-details label:last-child{grid-column:1/-1}
+.image-fields{background:#eff3e9;border:1px dashed #c5d3bc;border-radius:12px;padding:16px;display:grid;gap:14px}
+.image-fields h3{font-size:14px}.image-fields .item-image-preview{width:100px;height:100px;border:3px solid white;margin:0}.image-status:empty{display:none}.image-status{margin:0;font-size:13px}
+#menu-builder input[type=file]{padding:10px;background:white;font-size:13px}#menu-builder input[type=file]::file-selector-button{border:0;border-radius:6px;background:#e5edda;color:#14382c;padding:8px 12px;margin-right:10px;font:inherit;font-weight:600;cursor:pointer}
+#menu-builder .actions{gap:10px;margin-top:18px}#menu-builder .button{font-size:14px;border-radius:10px;min-height:44px;padding:11px 16px}
+#add-item{width:100%;border-style:dashed!important;background:#f4f7ee!important}.menu-item-editor>.remove-item{font-size:13px;margin-top:10px;color:#984638;text-decoration:none}
+.menu-item-editor .actions button{flex:1;font-size:13px;min-height:40px;background:white;border-color:#d8dfd3}
+.preview-label{font-size:12px;font-weight:700;color:#68806a}.menu-preview{border:1px solid #d8dfd3;box-shadow:0 8px 30px #14382c08}
+#menu-status{font-size:13px;color:#63765e;margin:16px 0 0;line-height:1.6}#published-info{overflow-wrap:anywhere}#published-info a{text-decoration:underline;text-underline-offset:3px}
+@media(max-width:1050px){.bilingual-fields{grid-template-columns:1fr}.item-field-group+.item-field-group{border-top:1px solid #e1e6dc;padding-top:16px}}
+@media(max-width:800px){.menu-workspace{grid-template-columns:1fr}#menu-builder{padding:20px}.bilingual-fields{grid-template-columns:1fr 1fr}}
+@media(max-width:500px){#menu-builder{padding:16px;border-radius:14px}.menu-item-editor{padding:15px}.bilingual-fields,.store-fields,.item-details{grid-template-columns:1fr}.store-fields label:first-of-type,.item-details label:last-child{grid-column:auto}.bilingual-fields{gap:16px}#menu-builder>.actions .button{flex:1}#menu-builder input,#menu-builder select{font-size:16px}}
+@media print{.menu-workspace{display:block}#menu-builder{display:none!important}.menu-preview{border:0;box-shadow:none}}
