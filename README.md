@@ -88,7 +88,7 @@ The live project has not started Claude API testing because it currently lacks a
 
 ## Project responsibility
 
-TRAVI Labs is developed and operated by TRAVI GROUP VIETNAM JOINT STOCK COMPANY. Travivn is the technical GitHub account used to store and manage the project's source code. Luu Van Tuan is the founder and director of TRAVI GROUP. He has more than 10 years of management experience in the technology industry and owns TRAVI Tea & Coffee. This background connects the project's software direction with day-to-day café operations. Project coordination and pilot feedback are handled through hotro@travi.vn. The technical account is not a separate legal project operator.
+TRAVI Labs is developed and operated by TRAVI GROUP VIETNAM JOINT STOCK COMPANY. Travivn is the technical GitHub account used to store and manage the project's source code. Luu Van Tuan is the founder and director of TRAVI GROUP. He has more than 10 years of management experience in the technology industry and owns TRAVI Tea & Coffee. This background connects the project's software direction with day-to-day café operations. Luu Van Tuan can be contacted directly at luuvantuan@travi.vn. Project coordination and pilot feedback are handled through hotro@travi.vn. The technical account is not a separate legal project operator.
 
 ## Intended users and proposed business model
 
