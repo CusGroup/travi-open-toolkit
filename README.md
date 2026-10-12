@@ -113,3 +113,14 @@ Independent shop owners can share recurring menu and reporting tasks through hot
 ## TRAVI Tea & Coffee locations
 
 The founder owns TRAVI Tea & Coffee, with café locations at 347 Nguyen Khang Street, Cau Giay, Hanoi and 270 Truong Chinh Street, Dong Da, Hanoi, Vietnam. These owner-supplied locations provide context for understanding shop workflows; they are not evidence of completed software or AI pilots. The company registered address remains 347 Nguyen Khang Street.
+
+
+## Sales analysis capabilities
+
+The sales workspace now includes date-range filtering, revenue and quantity rankings, item revenue share, quantity-weighted average unit prices, daily and top-item bar charts, observed-day coverage and comparisons between two non-overlapping periods. Computed observations identify leading items and peak supplied days without inferring causes or profit.
+
+Missing dates remain unknown and are not filled with zero. Both comparison periods must contain supplied records; differing period lengths are flagged. A zero comparison revenue produces an unavailable percentage, not infinite growth. Changing currency labels never converts values. Item identity is the exact supplied name; inconsistent naming must be cleaned in the source CSV. This is not a POS, accounting system or order tracker.
+
+CSV data and individual input records stay in page memory. JSON exports contain computed summaries, selected date ranges, optional comparison and limitations. No AI call is made; optional Claude report explanations remain planned.
+
+Run `node tests/test-sales.js` for parser, totals, date ranges, sparse periods, weighted prices, zero baselines and comparison validation.
