@@ -105,3 +105,7 @@ This is a plan, not completed evidence:
 Credits would fund live provider validation and these planned evaluations. Request counts, token usage and cost per reviewed task would be recorded. The current translation endpoint allows 20 attempts per UTC day; expansion requires a reviewed limit change. Live provider testing, report explanation and measured pilot outcomes remain outstanding.
 
 The project website is https://travi.vn/. Its company, product roadmap and service direction are presented separately from the reusable software in this repository.
+
+## TRAVI Tea & Coffee locations
+
+The founder owns TRAVI Tea & Coffee, with café locations at 347 Nguyễn Khang, Cầu Giấy, Hanoi and 270 Trường Chinh, Đống Đa, Hanoi, Vietnam. These owner-supplied locations provide context for understanding shop workflows; they are not evidence of completed software or AI pilots. The company registered address remains 347 Nguyễn Khang.
