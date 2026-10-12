@@ -1,0 +1,13 @@
+const assert=require('assert'),fs=require('fs');const {parseCSV,analyze}=require('../site/sales-core.js');
+const sample=fs.readFileSync(require('path').join(__dirname,'../site/sales-template.csv'),'utf8');
+const r=analyze(sample);assert.equal(r.revenue_cents,39500000);assert.equal(r.quantity,12);assert.equal(r.records,4);assert.equal(r.products[0].item,'Example tea');assert.equal(r.daily.length,2);
+assert.equal(analyze('date,item,quantity,unit_price\n2026-02-28,"Tea, peach",3,0.10').revenue_cents,30);
+assert.equal(analyze('\uFEFFdate;item;quantity;unit_price\r\n2026-01-01;Tea;2;1.25\r\n',';').revenue_cents,250);
+assert.equal(analyze('date,item,quantity,unit_price\n2026-01-01,"Tea ""special""",1,0').products[0].item,'Tea "special"');
+assert.equal(parseCSV('a,b\n"line1\nline2",x')[1][0],'line1\nline2');
+for(const row of ['2026-02-30,Tea,1,1','2026-01-01,Tea,-1,1','2026-01-01,Tea,1.5,1','2026-01-01,Tea,1,"1,000"','2026-01-01,Tea,1,1.234','2026-01-01,,1,1','2026-01-01,Tea,1'])assert.throws(()=>analyze('date,item,quantity,unit_price\n'+row));
+assert.throws(()=>parseCSV('a\n"unclosed'));assert.throws(()=>parseCSV('a\n"quoted"junk'));
+assert.throws(()=>analyze('date,item,quantity,quantity\n2026-01-01,Tea,1,1'));
+assert.throws(()=>analyze('date,item,quantity,unit_price\n'+('2026-01-01,Tea,1,1\n').repeat(5001)));
+assert.throws(()=>analyze('date,item,quantity,unit_price\n2026-01-01,Tea,1000000,1000000000'));
+console.log('Sales tests passed: sample totals, decimals, CSV quoting, dates, malformed rows and safe limits.');

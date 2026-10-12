@@ -129,4 +129,7 @@ class Handler(SimpleHTTPRequestHandler):
     else: c.execute('INSERT INTO products(name,category,price,description,image,available,visible,position) VALUES(?,?,?,?,?,?,?,?)',values)
    return self.reply(200,{'ok':True})
   self.reply(404,{'error':'Không tìm thấy'})
+from claude_menu import install as install_claude_menu
+install_claude_menu(Handler, DATA)
 ThreadingHTTPServer(('0.0.0.0',8080),Handler).serve_forever()
+

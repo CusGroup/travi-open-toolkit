@@ -1,6 +1,6 @@
 # TRAVI Open Toolkit
 
-An early bilingual menu builder for independent shops and cafés. No AI service or API key is required. AI translation is a future direction, not an implemented feature.
+Open-source tools for independent shops and cafés, with a planned F&B operations assistant. Working prototypes include a bilingual menu builder and a local sales CSV workspace. An optional administrator-only Claude translation connector is implemented but has not been tested against a live provider. No API key is required for menu editing or CSV calculations.
 
 ## Features
 
@@ -12,7 +12,7 @@ An early bilingual menu builder for independent shops and cafés. No AI service 
 
 ## Optional café admin backend
 
-The [admin module](admin/README.md) includes login, product and category management, image uploads, availability and visibility controls, website content and appearance editing, SQLite storage and a minimal storefront. It is a separate single-store server with sample configuration and no production data. The admin interface is currently Vietnamese; AI remains planned.
+The [admin module](admin/README.md) includes login, product and category management, image uploads, availability and visibility controls, website content and appearance editing, SQLite storage and a minimal storefront. It is a separate single-store server with sample configuration and no production data. The admin interface is currently Vietnamese. The optional Claude translation pilot runs separately at /translate.html, with administrator authentication; it is not a production AI service.
 
 ## Why we plan to use Claude
 
@@ -23,11 +23,11 @@ Claude API is planned as an optional language and reasoning layer to help indepe
 - **Store assistance:** explain owner-selected documents and, in a later phase, sales summaries in plain language. Numerical calculations remain deterministic; Claude would explain the computed results.
 - **Community resources:** help contributors adapt reusable menu and customer communication templates to local languages and contexts.
 
-The first planned integration is a “Translate with Claude” action with a side-by-side review screen. An owner would select the fields to send, review the generated draft and explicitly approve changes before saving or publishing. API calls would run on the backend; keys would never be embedded in browser code or public menus. Operators would configure their own Anthropic account and pay API usage separately from the Apache-2.0 code.
+The first implemented connector is a “Translate with Claude” action with a review screen in the optional admin module. Live API testing and pilot evaluation remain outstanding. An owner would select the fields to send, review the generated draft and explicitly approve changes before saving or publishing. API calls would run on the backend; keys would never be embedded in browser code or public menus. Operators would configure their own Anthropic account and pay API usage separately from the Apache-2.0 code.
 
-Before release, we plan to add request limits, error handling and tests for preserving names, prices and supplied ingredient facts, then evaluate translations with bilingual reviewers. AI output can be inaccurate and will require human review.
+Request caps, authentication, consent, response-shape validation and local tests are implemented. Next steps are live provider tests and translation evaluation with bilingual reviewers. Semantic preservation of ingredient facts still requires human review. AI output can be inaccurate and will require human review.
 
-**Current status:** this repository has no Claude integration, AI translation, document assistant or sales-data connector yet. These are development plans, not available features or a claim of partnership with Anthropic.
+**Current status:** working menu and CSV prototypes; optional translation connector code with mocked provider tests. No live API test, document assistant, automated sales connector, forecasting system or completed pilot is claimed. Claude report explanations and inventory assistance remain planned. No Anthropic partnership is claimed.
 
 ## Run with Docker
 
@@ -49,7 +49,7 @@ DATA_DIR=./data PUBLIC_BASE_URL=http://localhost:8080 python server.py
 
 ## Ownership and privacy
 
-Anyone who possesses a menu's edit key can update or delete it. Download the recovery file and keep it private. Losing every copy of the key means losing the ability to edit through the app. Public menus and their images can be viewed by anyone with their URL. Remote images connect to the image host. Browser drafts and edit keys are stored locally; published menu content is stored in SQLite on the server. There are no analytics or AI calls.
+Anyone who possesses a menu's edit key can update or delete it. Download the recovery file and keep it private. Losing every copy of the key means losing the ability to edit through the app. Public menus and their images can be viewed by anyone with their URL. Remote images connect to the image host. Browser drafts and edit keys are stored locally; published menu content is stored in SQLite on the server. There is no background telemetry. The menu builder and CSV workspace make no AI calls. Only the optional admin translation route sends selected name/description text to Anthropic after authentication and consent.
 
 ## Limits and operations
 
@@ -64,3 +64,23 @@ Code is licensed under Apache-2.0. The TRAVI name does not imply endorsement of 
 ## Validation
 
 Run `python -m unittest discover -s tests`. JavaScript syntax can be checked with `node --check site/menu-demo.js` and `node --check site/builder.js`. Browser interaction, PDF output and QR scanning still require manual validation on your target devices.
+
+
+## Sales CSV workspace
+
+Open /sales.html with the root server or optional admin image. Import a UTF-8 CSV up to 1 MB with headers date,item,quantity,unit_price and up to 5,000 data records. Dates use YYYY-MM-DD, quantities are positive integers and prices use a decimal point without thousands separators. Comma, semicolon and tab delimiters are supported. Invalid rows block the report rather than silently disappearing.
+
+Calculations use integer hundredths of the selected currency: revenue = quantity × unit_price. The workspace reports quantities, item revenue rankings and daily totals. Records are not orders. Refunds, discounts, taxes, costs, profitability and missing dates are not separately modeled. Currency selection labels the supplied figures; it never converts currencies. Sample data is fictional, not evidence of TRAVI revenue or customer usage.
+
+Files stay in page memory, with no upload, local draft persistence or AI call. JSON exports remain on your device. The planned role of Claude is to explain owner-selected computed summaries, identify missing context and suggest reviewable questions; this report explanation feature is not implemented.
+
+Run node tests/test-sales.js to verify CSV parsing, totals, decimal precision, dates and rejection of malformed or oversized inputs.
+
+## Product roadmap and evaluation
+
+1. Evaluate the optional translation connector with a real account and bilingual reviewers.
+2. Develop report explanations grounded in deterministic CSV calculations.
+3. Pilot with an owner at a café and document actual findings.
+4. Explore inventory and preparation estimates only after validating data and needs.
+
+The live project has not started Claude API testing because it currently lacks an API testing budget. No measured waste reduction, global adoption or completed AI deployment is claimed.
