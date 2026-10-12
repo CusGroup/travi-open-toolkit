@@ -88,13 +88,13 @@ The live project has not started Claude API testing because it currently lacks a
 
 ## Project responsibility
 
-TRAVI Labs is developed and operated by TRAVI GROUP VIETNAM JOINT STOCK COMPANY. Travivn is the technical GitHub account used to store and manage the project's source code. Luu Van Tuan is the founder and director of TRAVI GROUP. He has more than 10 years of management experience in the technology industry and owns TRAVI Tea & Coffee. This background connects the project's software direction with day-to-day café operations. Luu Van Tuan can be contacted directly at luuvantuan@travi.vn. Project coordination and pilot feedback are handled through hotro@travi.vn. The technical account is not a separate legal project operator.
+TRAVI Labs is developed and operated by TRAVI GROUP VIETNAM JOINT STOCK COMPANY. Travivn is the technical GitHub account used to store and manage the project's source code. Luu Van Tuan is the founder and director of TRAVI GROUP. He has more than 10 years of management experience in the technology industry and owns TRAVI Tea & Coffee. This background connects the project's software direction with day-to-day café operations. Luu Van Tuan can be contacted directly at luuvantuan@travi.vn. Project coordination and pilot feedback are handled through hotro@travi.vn. 
 
 ## Intended users and proposed business model
 
 The target users are independent tea shops, cafés and small F&B teams. The Apache-2.0 menu and CSV tools remain available for self-hosting. The proposed commercial direction is one-time setup/customization and optional recurring hosting, maintenance and technical support. Future integrations and evaluated AI features may be added according to shop needs. Scope and pricing are not finalized; no paid plan, paying customer or revenue is claimed.
 
-## Proposed evaluation and use of API credits
+## Next evaluation milestones
 
 This is a plan, not completed evidence:
 
@@ -102,9 +102,13 @@ This is a plan, not completed evidence:
 2. Build an AI report-explanation prototype and evaluate it on 10 synthetic or authorized computed summaries. Require numerical claims to trace to calculations; flag missing costs and context rather than invent causes or profitability.
 3. Run a small owner-reviewed café pilot, record corrections, feedback and actual task time, then decide whether to invite other shops.
 
-Credits would fund live provider validation and these planned evaluations. Request counts, token usage and cost per reviewed task would be recorded. The current translation endpoint allows 20 attempts per UTC day; expansion requires a reviewed limit change. Live provider testing, report explanation and measured pilot outcomes remain outstanding.
+Live provider validation is the next step for these planned evaluations. Request counts, token usage and cost per reviewed task would be recorded. The current translation endpoint allows 20 attempts per UTC day; expansion requires a reviewed limit change. Live provider testing, report explanation and measured pilot outcomes remain outstanding.
 
-The project website is https://travi.vn/. Its company, product roadmap and service direction are presented separately from the reusable software in this repository.
+Visit https://travi.vn/ for the online tools, café locations, team and development roadmap.
+
+## Community contributions
+
+Independent shop owners can share recurring menu and reporting tasks through hotro@travi.vn. Developers can contribute translations, accessibility improvements, documentation, error handling and tests through GitHub issues and focused pull requests. Use fictional example data and keep credentials and private business records out of commits.
 
 ## TRAVI Tea & Coffee locations
 
