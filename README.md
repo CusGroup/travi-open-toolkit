@@ -84,3 +84,24 @@ Run node tests/test-sales.js to verify CSV parsing, totals, decimal precision, d
 4. Explore inventory and preparation estimates only after validating data and needs.
 
 The live project has not started Claude API testing because it currently lacks an API testing budget. No measured waste reduction, global adoption or completed AI deployment is claimed.
+
+
+## Project responsibility
+
+TRAVI Labs is developed and operated by TRAVI GROUP VIETNAM JOINT STOCK COMPANY. Travivn is the technical GitHub account used to store and manage the project's source code. Project coordination and pilot feedback are handled through hotro@travi.vn. No individual founder biography or separate legal partnership is claimed by the account name.
+
+## Intended users and proposed business model
+
+The target users are independent tea shops, cafés and small F&B teams. The Apache-2.0 menu and CSV tools remain available for self-hosting. The proposed commercial direction is one-time setup/customization and optional recurring hosting, maintenance and technical support. Future integrations and evaluated AI features may be added according to shop needs. Scope and pricing are not finalized; no paid plan, paying customer or revenue is claimed.
+
+## Proposed evaluation and use of API credits
+
+This is a plan, not completed evidence:
+
+1. Evaluate the translation connector on 20 owner-approved or fictional menu items with bilingual review. Check preservation of source facts, readability, handling of failures, response time and API usage.
+2. Build an AI report-explanation prototype and evaluate it on 10 synthetic or authorized computed summaries. Require numerical claims to trace to calculations; flag missing costs and context rather than invent causes or profitability.
+3. Run a small owner-reviewed café pilot, record corrections, feedback and actual task time, then decide whether to invite other shops.
+
+Credits would fund live provider validation and these planned evaluations. Request counts, token usage and cost per reviewed task would be recorded. The current translation endpoint allows 20 attempts per UTC day; expansion requires a reviewed limit change. Live provider testing, report explanation and measured pilot outcomes remain outstanding.
+
+The project website is https://travi.vn/. Its company, product roadmap and service direction are presented separately from the reusable software in this repository.
