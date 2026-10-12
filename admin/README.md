@@ -38,3 +38,6 @@ The connector is implemented, disabled by default and not tested against a live 
 Translation uses only the selected item name and description. Prices, images and customer data are not sent. No AI account is needed for the normal menu builder or /sales.html CSV calculations. The pilot limit is 3 attempts per minute, 20 per UTC day and 2 concurrent requests; failed requests count. Timestamp-only usage records are stored in /data/ai-usage.sqlite. Do not treat AI text as verification of allergens, ingredients, nutrition or organic status.
 
 Validation: python3 -m unittest discover -s tests (from repository root). Live provider and browser tests remain outstanding.
+
+
+Project coordination: TRAVI GROUP VIETNAM JOINT STOCK COMPANY via hotro@travi.vn. Source is managed through the Travivn technical GitHub account. This module remains a prototype; no paying customer or completed live Claude pilot is claimed.
