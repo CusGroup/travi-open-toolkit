@@ -108,4 +108,4 @@ The project website is https://travi.vn/. Its company, product roadmap and servi
 
 ## TRAVI Tea & Coffee locations
 
-The founder owns TRAVI Tea & Coffee, with café locations at 347 Nguyễn Khang, Cầu Giấy, Hanoi and 270 Trường Chinh, Đống Đa, Hanoi, Vietnam. These owner-supplied locations provide context for understanding shop workflows; they are not evidence of completed software or AI pilots. The company registered address remains 347 Nguyễn Khang.
+The founder owns TRAVI Tea & Coffee, with café locations at 347 Nguyen Khang Street, Cau Giay, Hanoi and 270 Truong Chinh Street, Dong Da, Hanoi, Vietnam. These owner-supplied locations provide context for understanding shop workflows; they are not evidence of completed software or AI pilots. The company registered address remains 347 Nguyen Khang Street.
